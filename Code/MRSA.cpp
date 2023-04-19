@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+
 int gcd(int a, int b)
 {
     int temp;
@@ -40,19 +42,22 @@ int modPow(int base, int exponent, int modulus) {
 
 int main()
 {
-    int p, q;
+    int p, q, r;
     cout<<"Enter p: ";
     cin>>p;
 
     cout<<"Enter q: ";
     cin>>q;
 
-    int n=p*q;
-    int fi=(p-1)*(q-1);
+    cout<<"Enter r: ";
+    cin>>r;
+
+    int n=p*q*r;
+    int fi=(p-1)*(q-1)*(r-1);
     
-    int e;
-    cout<<"Enter e: ";
-    cin>>e;
+    int e = 2;
+    // cout<<"Enter e: ";
+    // cin>>e;
 
     while (e < fi) 
     {
@@ -61,6 +66,8 @@ int main()
         else
             e++;
     }
+
+    int ec = e;
     
     int d = inverse(e, fi);
 
